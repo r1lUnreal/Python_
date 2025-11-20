@@ -4,31 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <title>conv</title>
 </head>
 
-<body style="background-color: rgb(219, 215, 209);">
-    <div style="text-align: center;" class="text">
-        <h1>Hello</h1>
-        <p>Илюша 16 годиков играю на Majestic RP =D</p>
-    </div>
-    <div style="display: flex; justify-content: center;" class="img">
-        <img style="height: 200px;" src="https://www.seekpng.com/png/detail/893-8937263_hug.png" alt="image">
-    </div>
-    <br>
-    <div style="display: flex; justify-content: center;" class="putin">
-        <img style="height: 500px; width: 1900px;" src="https://avatars.mds.yandex.net/i?id=e630c1b8284e26273beeff3e4363dabd_l-9229208-images-thumbs&n=13" alt="image">
-    </div>
-    <br>
-    <div style="text-align: center;" class="link">
-        <a target="_blank" href="https://youtu.be/etZa36v63rc?si=ZAx98oyizD9R6UW7">тык</a>
-    </div>
-    <div style="text-align: center; margin-top: 100px;" class="g">
-        <h1>Где то там внизу далеко далеко есть футЕр</h1>
-    </div>
-    <div style="margin-top: 300%;" class="foter">
-        <p>А вот и футЕр =D</p>
-        <footer style="text-align: center; border: 1px solid black; padding: 13.5px;">@bay rilUnreal</footer>
+<body>
+    <div class="converter">
+        <h1>Конвертер валют</h1>
+        <form method="get">
+            <input type="number" name="summ" placeholder="Сумма" step="0.01" required>
+
+            <select class="button_left" name="from_currency">
+                <option value="RUB">RUB (Рубли)</option>
+                <option value="USD">USD (Доллары)</option>
+                <option value="KZT">KZT (Тенге)</option>
+            </select>
+
+            <span>→</span>
+
+            <select class="button_right" name="to_currency">
+                <option value="USD">USD (Доллары)</option>
+                <option value="KZT">KZT (Тенге)</option>
+                <option value="RUB">RUB (Рубли)</option>
+            </select>
+
+            <br><br>
+            <button class="convert_btn" type="submit">Конвертировать</button>
+        </form>
+
+        {% if data.conversion_text %}
+        <div class="result">
+            <h2>{{ data.conversion_text }}</h2>
+        </div>
+        {% endif %}
     </div>
 </body>
 

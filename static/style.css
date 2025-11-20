@@ -1,0 +1,214 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 650px;
+    margin: 50px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    min-height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ecf0f1;
+}
+
+.converter {
+    background: #2c3e50;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    border: 1px solid #34495e;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 2.2em;
+    background: linear-gradient(135deg, #3498db, #9b59b6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+input,
+select,
+button {
+    padding: 14px 18px;
+    margin: 5px;
+    font-size: 16px;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+input {
+    width: 200px;
+    background: #34495e;
+    border: 2px solid #5d6d7e;
+    color: #ffffff;
+    text-align: center;
+}
+
+input::placeholder {
+    color: #bdc3c7;
+}
+
+input:focus {
+    outline: none;
+    border-color: #3498db;
+    background: #2c3e50;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+    transform: translateY(-2px);
+}
+
+select {
+    background: #34495e;
+    color: #ffffff;
+    cursor: pointer;
+    min-width: 150px;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23bdc3c7'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+    border: 2px solid #5d6d7e;
+}
+
+select:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+    border-color: #3498db;
+}
+
+.button_left,
+.button_right {
+    padding: 14px 18px;
+}
+
+button {
+    background: linear-gradient(135deg, #3498db, #9b59b6);
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    padding: 16px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 10px;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
+}
+
+button:active {
+    transform: translateY(-1px);
+}
+
+.currency-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #3498db;
+    margin: 0 10px;
+}
+
+.result {
+    margin-top: 30px;
+    padding: 25px;
+    background: #27ae60;
+    border-radius: 15px;
+    text-align: center;
+    border-left: 5px solid #2ecc71;
+    box-shadow: 0 5px 15px rgba(39, 174, 96, 0.3);
+    animation: fadeIn 0.5s ease-in;
+}
+
+.result h2 {
+    margin: 0;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.4em;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+select option {
+    background: #34495e;
+    color: #ffffff;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    body {
+        margin: 20px auto;
+        padding: 15px;
+        background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    }
+
+    .converter {
+        padding: 30px 20px;
+        background: #2c3e50;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .currency-row {
+        flex-direction: column;
+    }
+
+    input,
+    select {
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #2c3e50;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #34495e;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3498db;
+}
